@@ -33,12 +33,7 @@
         </div>
 
         <div class="row divMargin">
-            <div class="col-3">
-                Búsqueda
-            </div>
-            <div class="col-9">
-                <input type="text" class="form-control" id="tbBuscar" placeholder="Nombre del distribuidor" />
-            </div>
+            
         </div>
 
         <div class="row divMargin">
@@ -61,7 +56,8 @@
 <script>
     $(document).ready(function() {
         checkSession();
-        $("#aMenu").addClass("currentPage");
+        $("#aRed").addClass("currentPage");
+        obtenerRed();
     });
     $(function() {     
         $("#tbBuscar").autocomplete({

@@ -11,9 +11,7 @@
 
         require('connection.php');
 
-        $idTienda = $_COOKIE["nb_idtienda"];
-        $prefijo = $_COOKIE["nb_prefijo"];
-        $idUsuario = $_COOKIE["nb_idusuario"];
+        $idUsuario = $_COOKIE["nbov_idusuario"];
 
         $con = new mysqli($hn, $un, $pw, $db);
 
