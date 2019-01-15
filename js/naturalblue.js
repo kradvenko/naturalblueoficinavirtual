@@ -33,14 +33,14 @@ function userLogin() {
     $.ajax({url: "php/login.php", async: false, type: "POST", data: { u: u, p: p }, success: function(res) {
         $('resultado', res).each(function(index, element) {
             if ($(this).find("respuesta").text() == "OK") {
-                document.cookie = "nb_idusuario=" + $(this).find("idusuario").text() + "; Path=/;";
-                document.cookie = "nb_usuario=" + $(this).find("usuario").text() + "; Path=/;";
-                document.cookie = "nb_tipo=" + $(this).find("tipo").text() + "; Path=/;";
-                document.cookie = "nb_nombre=" + $(this).find("nombre").text() + "; Path=/;";
-                document.cookie = "nb_idtienda=" + $(this).find("idtienda").text() + "; Path=/;";
-                document.cookie = "nb_tienda=" + $(this).find("tienda").text() + "; Path=/;";
-                document.cookie = "nb_prefijo=" + $(this).find("prefijo").text() + "; Path=/;";
-                document.cookie = "nb_tipotienda=" + $(this).find("tipotienda").text() + "; Path=/;";
+                document.cookie = "nbov_idusuario=" + $(this).find("idusuario").text() + "; Path=/;";
+                document.cookie = "nbov_usuario=" + $(this).find("usuario").text() + "; Path=/;";
+                document.cookie = "nbov_tipo=" + $(this).find("tipo").text() + "; Path=/;";
+                document.cookie = "nbov_nombre=" + $(this).find("nombre").text() + "; Path=/;";
+                //document.cookie = "nbov_idtienda=" + $(this).find("idtienda").text() + "; Path=/;";
+                //document.cookie = "nbov_tienda=" + $(this).find("tienda").text() + "; Path=/;";
+                //document.cookie = "nbov_prefijo=" + $(this).find("prefijo").text() + "; Path=/;";
+                //document.cookie = "nbov_tipotienda=" + $(this).find("tipotienda").text() + "; Path=/;";
                 document.location = "menu.php";
             } else {
                 alert("Usuario o contraseña incorrectos.");
@@ -50,20 +50,20 @@ function userLogin() {
 }
 
 function checkSession() {
-    if (!getCookie("nb_idusuario")) {
+    if (!getCookie("nbov_idusuario")) {
         document.location = "index.php";
     }
 }
 
 function cerrarSesion() {
-    document.cookie = "nb_idusuario=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_usuario=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_tipo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_nombre=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_idtienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_tienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_prefijo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
-    document.cookie = "nb_tipotienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    document.cookie = "nbov_idusuario=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    document.cookie = "nbov_usuario=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    document.cookie = "nbov_tipo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    document.cookie = "nbov_nombre=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    //document.cookie = "nbov_idtienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    //document.cookie = "nbov_tienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    //document.cookie = "nbov_prefijo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    //document.cookie = "nbov_tipotienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     document.location = "index.php";
 }
 

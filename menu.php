@@ -10,7 +10,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/naturalblue.js"></script>
 
-    <title>Natural blue</title>
+    <title>Natural blue - Oficina Virtual</title>
 </head>
 <body>
     <div class="container mainContainer">

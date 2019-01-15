@@ -13,11 +13,9 @@
 
         $con = new mysqli($hn, $un, $pw, $db);
 
-        $sql = "Select usuarios.*, tiendas.nombre As tienda, tiendas.tipo As tipotienda, tiendas.prefijo As prefijo
-                From usuarios 
-                Left Join tiendas
-                On tiendas.idtienda = usuarios.idtienda
-                Where usuario = '$u' And pass = '$p' And usuarios.estado = 'ACTIVO'";
+        $sql = "Select usuarios.*
+                From usuarios                 
+                Where usuario = '$u' And pass = '$p' And usuarios.estado = 'ACTIVO' And usuarios.tipo = 'DISTRIBUIDOR'";
 
         $result = $con->query($sql);
 
@@ -28,14 +26,14 @@
             echo "<respuesta>OK</respuesta>\n";
             echo "<idusuario>" . $row['idusuario'] . "</idusuario>\n";
             echo "<usuario>" . $row['usuario'] . "</usuario>\n";
-            echo "<pass>" . $row['pass'] . "</pass>\n";
+            //echo "<pass>" . $row['pass'] . "</pass>\n";
             echo "<tipo>" . $row['tipo'] . "</tipo>\n";
             echo "<estado>" . $row['estado'] . "</estado>\n";
             echo "<nombre>" . $row['nombre'] . "</nombre>\n";
-            echo "<idtienda>" . $row['idtienda'] . "</idtienda>\n";
-            echo "<tienda>" . $row['tienda'] . "</tienda>\n";
-            echo "<prefijo>" . $row['prefijo'] . "</prefijo>\n";
-            echo "<tipotienda>" . $row['tipotienda'] . "</tipotienda>\n";
+            //echo "<idtienda>" . $row['idtienda'] . "</idtienda>\n";
+            //echo "<tienda>" . $row['tienda'] . "</tienda>\n";
+            //echo "<prefijo>" . $row['prefijo'] . "</prefijo>\n";
+            //echo "<tipotienda>" . $row['tipotienda'] . "</tipotienda>\n";
         }
 
         echo "</resultado>\n";

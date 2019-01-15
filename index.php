@@ -11,7 +11,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/naturalblue.js"></script>
 
-    <title>Natural Blue</title>
+    <title>Natural Blue - Oficina Virtual</title>
 </head>
 <body>
     <div class="container">        
