@@ -1,0 +1,812 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Regular.ttf")
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Poiret One';
+    src: url("../fonts/PoiretOne-Regular.ttf")
+    format('truetype');
+}
+
+body {
+    background-image: url(../imgs/pattern57.jpg);
+    font-family: 'Montserrat', serif;
+    font-size: 12px;
+}
+
+.mainContainer {
+    box-shadow: 1px 1px 10px #888888;
+}
+
+.mainButton {
+    background-color: #066983;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.mainButton:hover {
+    background-color: #5891a0;
+}
+
+.mainButton:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    visibility: hidden;
+    border-radius: 0px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+
+.mainButton:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.divElecciones {
+    visibility: hidden;
+}
+
+.yearButton {
+    background-color: #580018;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.yearButton:hover {
+    background-color: #821936;
+}
+
+.yearButton:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    visibility: hidden;
+    border-radius: 0px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+
+.yearButton:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.tbsingle {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.container {
+    background: #ffffff;
+}
+
+.divLogo {
+    text-align: center;
+    border-bottom: solid 2px #59cef1;
+}
+.divMargin {
+    margin-bottom: 5px;
+}
+
+.divBackgroundBlue {    
+    color: #000000;    
+    font-size: 20px;
+    border-bottom: 3px solid #066983;
+    margin-bottom: 20px;
+}
+
+.divBackgroundBlue2 {
+    background-color: #066983;
+    color: #ffffff;
+    
+    font-size: 16px;
+}
+
+.divBackgroundBlue3 {
+    background-color: #5891a0;
+    color: #ffffff;
+    
+    font-size: 16px;
+}
+
+.divBackgroundOne {
+    background-color: #59cef1;
+}
+
+.tableLocalidades {
+    margin: 5px;
+}
+
+.tableLocalidades td {
+    margin: 5px;
+}
+
+.labelType01 {
+    font-size: 25px;
+    font-family: 'Poiret One', serif;
+}
+
+.labelType02 {
+    font-size: 20px;
+    font-family: 'Poiret One', serif;
+}
+
+.labelType03 {
+    font-size: 17px;
+    font-family: 'Poiret One', serif;
+}
+
+input {
+    text-align: center;
+    font-size: 12px;
+}
+
+.inputUpper {
+    text-transform: uppercase;
+}
+
+.divCenter {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.menuContainer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.mainMenu {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.mainMenuElement {
+    min-width: 160px;
+    transition: all 0.5s;
+    color: #000000 !important;
+    font-family: 'Poiret One', serif;
+    font-size: 22px;
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mainMenuElement:hover {
+    text-decoration: none;
+    color: #066983 !important;
+    border-style: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #000 !important;
+}
+
+.tag {
+    border: 1px solid #a5d24a;
+    display: block;
+    float: left;
+    padding: 5px;
+    text-decoration: none;
+    background: #cde69c;
+    color: #638421;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-family: helvetica;
+    font-size: 13px;
+}
+
+.closeTag {
+    font-weight: bold;
+    color: #82ad2b;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 5px;
+}
+
+.closeTag:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.divTarjetaInstitucion {
+    background-color: #a5d24a;
+    margin: 3px;
+    border: 2px solid #638421;
+    transition: .25s linear;
+}
+
+.divTarjetaInstitucion:hover {
+    background-color: #cde69c;
+    cursor: pointer;
+}
+
+.divTarjetaInstitucionHeader {
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.divTarjetaInstitucionBody {
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.divTarjetaContacto {
+    background-color: #a5d24a;
+    margin: 3px;
+    border: 2px solid #638421;
+    transition: .25s linear;
+}
+
+.divTarjetaContacto:hover {
+    background-color: #cde69c;
+    cursor: pointer;
+}
+
+.divTarjetaContactoHeader {
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.divTarjetaContactoBody {
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.ultimaFicha {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 100;
+    font-size: 16px;
+    background: #5891a0;
+    border-color: #000000;
+    border: solid 1px;
+    cursor: pointer;   
+}
+
+.ultimaFicha:hover {
+    background: #000000;
+    /*border-color: #ffffff;*/
+    color: #ffffff;
+}
+
+.imgPreview {
+    height: 300px;
+}
+
+#navbarNavDropdown {
+    vertical-align: baseline;
+}
+
+.mainImg {
+    width: 100%;
+    margin: 0px !important;
+}
+
+.mainFooter {
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding: 20px;
+    text-align: end;
+}
+.currentPage {
+    text-decoration: none;
+    color: #490007 !important;
+    border-style: none;    
+    font-weight: bold;
+}
+
+.divAcervoBien {
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.divAcervoBien:hover {
+    color: #ffffff;
+    background-color: #667f85;
+}
+
+.divAcervoBienHeader {
+    font-family: 'Marck Script', cursive;
+    font-size: 25px;
+    text-align: center;
+    border-style: none;
+    border-bottom-style: none;
+    border-width: 2px;
+    padding-top: 10px;
+}
+
+.divAcervoBien label {
+    text-decoration: none;
+}
+
+.divAcervoBienHedearImg {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.divAcervoBienHedearImg img {
+    max-height: 150px;
+}
+
+.divAcervoBienFooter {
+    min-height: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-top: #000000 solid 0.5px;
+    margin-top: 5px;
+}
+
+.divFiltro {
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: #000000 solid 0.5px;
+    margin-bottom: 10px;
+}
+
+.applyFont01 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.divSeparator {
+    min-height: 50px;
+}
+
+.dropbtn {
+    background-color: #490007;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.divPageShortInfo {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: rgb(219, 219, 219);
+}
+
+.divPageShortInfo2 {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.divPageShortInfo3 {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+}
+
+.divCard {
+    text-align: center;
+    margin: 2px;
+    font-family: 'Montserrat', sans-serif;
+    height: 250px;
+    border: solid 1px #910027;
+    cursor: pointer;
+}
+
+.divCard:hover{
+    background-color: rgba(102, 70, 70, 0.8);
+    color: white;
+}
+
+.divCard label{
+    cursor: pointer;
+}
+
+.divCardBody {
+    min-height: 200px;
+    height: 80%;
+    padding-top: 10px;
+}
+
+.divCardBody img {
+    max-height: 150px;
+}
+
+.divCardFooter {
+    height: 20%;
+}
+
+.divCard:hover .divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly02-s.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
+}
+
+.divCard2 {
+    text-align: center;
+    margin: 2px;
+    font-family: 'Montserrat', sans-serif;
+    height: 400px;
+    border: solid 1px #910027;
+    cursor: pointer;
+}
+
+.divCard2:hover{
+    background-color: rgba(102, 70, 70, 0.8);
+    color: white;
+}
+
+.divCard2 label{
+    cursor: pointer;
+}
+
+.divCardBody2 {
+    min-height: 200px;
+    height: 30%;
+    padding-top: 10px;
+}
+
+.divCardBody2 img {
+    max-height: 150px;
+}
+
+.divCardFooter2 {
+    position: relative;
+    top: 40%;
+    height: 10%;
+    background-color: #910027;
+    color: #ffffff;
+}
+.divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly01-s.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
+}
+
+.divCard2:hover .divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly02-s.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
+}
+
+.divCardLabelBig {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.divVerBienElementoLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;    
+    text-align: center;
+}
+
+.divVerBienElementoContenido {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: dotted #000 1px;
+}
+
+.divVerBienElementoContenidoImagen {
+    text-align: center;
+    display: block;
+}
+
+.divVerBienElementoContenidoImagen img{
+    max-height: 500px;
+}
+
+.divPaisMainContainer {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 200px;
+    position: relative;
+}
+
+.divPaisMainHeader {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.divPaisMainImage{
+    float: left;
+}
+
+.divPaisMainInfo {
+    float: right;
+    font-size: 14px;
+}
+
+.divPaisMainContainer img {
+    height: 100px;
+}
+
+.divPaisBienHeader {
+    font-family: 'Poiret One', serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    height: 50px;
+}
+
+.bk-mx {
+    background-image: url(../imgs/mx-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ar {
+    background-image: url(../imgs/ar-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-br {
+    background-image: url(../imgs/br-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ca {
+    background-image: url(../imgs/ca-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-cu {
+    background-image: url(../imgs/cu-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-es {
+    background-image: url(../imgs/es-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-us {
+    background-image: url(../imgs/us-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-fr {
+    background-image: url(../imgs/fr-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-gb {
+    background-image: url(../imgs/gb-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-pt {
+    background-image: url(../imgs/pt-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-uy {
+    background-image: url(../imgs/uy-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ve {
+    background-image: url(../imgs/ve-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.navigation-bar {
+    font-family: 'Poiret One', serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    font-size: 22px;
+    background-color: #000000;
+    color: rgb(255, 154, 117);    
+}
+
+.navigation-bar a {
+    color: #f1f1f1;
+}
+
+.gridNavigation {
+    background-color: #490007;
+    height: 30px;
+}
+
+.gridNavigation span {
+    color: #ffffff;
+    font-family: 'Poiret One', serif;
+    font-size: 19px;
+    border: solid 0.5px;
+    border-color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.gridCurrentPage {
+    font-weight: bold;
+    border: solid 2px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.divBackgroundTwo {    
+    color: #ffffff;    
+    font-size: 20px;
+    border-top: 1px solid #188db1;
+    border-bottom: 1px solid #188db1;
+    margin-bottom: 20px;
+    background-color: #9ad8eb;
+}
+
+.divHeaderLista {    
+    color: #000000;
+    font-size: 13px;
+    border-bottom: 3px solid #82ad2b;
+    margin-bottom: 20px;
+    background-color: #cdf381;
+}
+
+.divBackgroundCitas {
+    color: #000000;    
+    font-size: 20px;
+    border-bottom: 3px solid #8b1371;
+    margin-bottom: 20px;
+    background-color: #faaee9;
+}
+
+.divHeaderListaCorteCitas {
+    color: #000000;
+    font-size: 18px;
+    border-bottom: 3px solid #8b1371;
+    margin-bottom: 20px;
+    background-color: #faaee9;
+}
+
+.divBackgroundPagos {
+    color: #000000;    
+    font-size: 20px;
+    border-bottom: 3px solid #41138b;
+    margin-bottom: 20px;
+    background-color: #c2aefa;
+}
+
+.divHeaderListaPagos {
+    color: #000000;
+    font-size: 18px;
+    border-bottom: 3px solid #41138b;
+    margin-bottom: 20px;
+    background-color: #c2aefa;
+}
+
+.divBackgroundVentas {
+    color: #000000;    
+    font-size: 20px;
+    border-bottom: 3px solid #8b1313;
+    margin-bottom: 20px;
+    background-color: #faaeb8;
+}
+
+.divHeaderListaVentas {
+    color: #000000;
+    font-size: 18px;
+    border-bottom: 3px solid #8b1313;
+    margin-bottom: 20px;
+    background-color: #faaeb8;
+}
+
+.divNombre {
+    cursor: pointer;
+}
+
+.divNombre:hover {
+    border-bottom: 2px solid #910027;
+}
+
+.divTotales {
+    /*background-color: rgb(108, 202, 155);*/
+    border: 2px solid #233500;
+}
