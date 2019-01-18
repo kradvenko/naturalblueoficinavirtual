@@ -24,7 +24,13 @@
                         <a href="ov_red.php">Red completa</a>
                         <a href="ov_redpuntos.php">Puntos del periodo</a>
                     </div>
-                </div>                
+                </div>
+                <div class="dropdown">
+                    <a href="" id="aDatos" class="mainMenuElement">Usuario</a>
+                    <div class="dropdown-content">
+                        <a href="ov_datos.php">Mi información</a>                        
+                    </div>
+                </div>
             </div>
             ';
         }
