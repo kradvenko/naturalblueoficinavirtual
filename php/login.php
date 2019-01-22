@@ -26,6 +26,7 @@
             echo "<respuesta>OK</respuesta>\n";
             echo "<idusuario>" . $row['idusuario'] . "</idusuario>\n";
             echo "<usuario>" . $row['usuario'] . "</usuario>\n";
+            echo "<iddistribuidor>" . $row['iddistribuidor'] . "</iddistribuidor>\n";
             //echo "<pass>" . $row['pass'] . "</pass>\n";
             echo "<tipo>" . $row['tipo'] . "</tipo>\n";
             echo "<estado>" . $row['estado'] . "</estado>\n";

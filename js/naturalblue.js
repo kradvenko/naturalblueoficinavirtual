@@ -37,6 +37,7 @@ function userLogin() {
                 document.cookie = "nbov_usuario=" + $(this).find("usuario").text() + "; Path=/;";
                 document.cookie = "nbov_tipo=" + $(this).find("tipo").text() + "; Path=/;";
                 document.cookie = "nbov_nombre=" + $(this).find("nombre").text() + "; Path=/;";
+                document.cookie = "nbov_iddistribuidor=" + $(this).find("iddistribuidor").text() + "; Path=/;";
                 //document.cookie = "nbov_idtienda=" + $(this).find("idtienda").text() + "; Path=/;";
                 //document.cookie = "nbov_tienda=" + $(this).find("tienda").text() + "; Path=/;";
                 //document.cookie = "nbov_prefijo=" + $(this).find("prefijo").text() + "; Path=/;";
@@ -60,6 +61,7 @@ function cerrarSesion() {
     document.cookie = "nbov_usuario=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     document.cookie = "nbov_tipo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     document.cookie = "nbov_nombre=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
+    document.cookie = "nbov_iddistribuidor=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     //document.cookie = "nbov_idtienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     //document.cookie = "nbov_tienda=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
     //document.cookie = "nbov_prefijo=; Path=/; Expires= Thu, 01 Jan 1970 00:00:01 GMT;";
